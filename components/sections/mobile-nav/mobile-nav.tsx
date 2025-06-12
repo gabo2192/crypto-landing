@@ -1,12 +1,13 @@
 import { Button } from "@/components/ui/button";
 import {
-    Sheet,
-    SheetContent,
-    SheetDescription,
-    SheetHeader,
-    SheetTitle,
-    SheetTrigger,
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
 } from "@/components/ui/sheet";
+import { navigation } from "@/data/navigation";
 import { MenuIcon } from "lucide-react";
 import Link from "next/link";
 
@@ -27,10 +28,11 @@ export default function MobileNav() {
           </SheetDescription>
         </SheetHeader>
         <div className="flex flex-col gap-4 mt-10 px-4">
-          <Link href="/">Home</Link>
-          <Link href="/">Documentation</Link>
-          <Link href="/">About us</Link>
-          <Link href="/">Contact us</Link>
+          {navigation.map((item) => (
+            <Link href={item.href} key={item.name}>
+              {item.name}
+            </Link>
+          ))}
         </div>
       </SheetContent>
     </Sheet>
