@@ -10,7 +10,7 @@ import Link from "next/link";
 import MobileNav from "../mobile-nav";
 export default function Header() {
   return (
-    <header className="flex justify-between px-3 py-2 mx-auto">
+    <header className="flex justify-between px-3 py-2 mx-auto h-12">
       <div>
         <h1 className="sr-only">Sikkabit</h1>
         <Image src="/logo.png" alt="Sikkabit" width={200} height={200}  className="-mt-5"/>
